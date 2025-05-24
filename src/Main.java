@@ -30,6 +30,17 @@ while (true) {
             }
         }
 
+        int evenCount = 0;
+        int oddCount = 0;
+
+        for (int num : numbers) {
+            if (num % 2 == 0) {
+                evenCount++;
+            } else {
+                oddCount++;
+            }
+        }
+
         double average = (double) amount / numbers.length;
 
         System.out.println("Вы ввели:");
@@ -41,6 +52,8 @@ while (true) {
         System.out.printf("Среднее значение: %.2f", average);
         System.out.println("\nМин. значение: " + minValue);
         System.out.println("Макс. значение: " + maxValue);
+        System.out.println("Количество четных чисел: " + evenCount);
+        System.out.println("Количество нечетных чисел: " + oddCount);
     } catch (Exception e) {
         System.out.println("Ошибка ввода: " + e.getMessage());
     }
